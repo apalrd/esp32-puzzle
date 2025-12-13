@@ -1,0 +1,8 @@
+source "/Users/apalrd/esp/v6.0/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/Users/apalrd/esp/v6.0/esp-idf/components/esp_app_format/Kconfig.projbuild"
+source "/Users/apalrd/esp/v6.0/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/Users/apalrd/esp/v6.0/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/Users/apalrd/esp/v6.0/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/Users/apalrd/esp32-puzzle/esp32-puzzle/main/Kconfig.projbuild"
+source "/Users/apalrd/esp/v6.0/esp-idf/examples/common_components/protocol_examples_common/Kconfig.projbuild"
+source "/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__ethernet_init/Kconfig.projbuild"

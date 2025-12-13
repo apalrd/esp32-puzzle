@@ -1,0 +1,2 @@
+source /Users/apalrd/esp32-puzzle/esp32-puzzle/build/gdbinit/symbols
+source /Users/apalrd/esp32-puzzle/esp32-puzzle/build/gdbinit/connect

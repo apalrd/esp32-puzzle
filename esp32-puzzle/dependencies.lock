@@ -1,0 +1,132 @@
+dependencies:
+  espressif/ethernet_init:
+    component_hash: b7303f1482091766b9b653ec8332775a9485f4df3c69141577de82847c4d2adf
+    dependencies:
+    - matches:
+      - if: $CONFIG{ETHERNET_SPI_USE_CH390} == 1
+      name: espressif/ch390
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - matches:
+      - if: $CONFIG{ETHERNET_SPI_USE_DM9051} == 1
+      name: espressif/dm9051
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      version: '*'
+    - matches:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      name: espressif/dp83848
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32, esp32p4]
+      - if: $CONFIG{ETHERNET_PHY_USE_DP83848} == 1
+      version: '*'
+    - matches:
+      - if: $CONFIG{ETHERNET_SPI_USE_ENC28J60} == 1
+      name: espressif/enc28j60
+      registry_url: https://components.espressif.com
+      require: private
+      version: '*'
+    - matches:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      name: espressif/ip101
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32, esp32p4]
+      - if: $CONFIG{ETHERNET_PHY_USE_IP101} == 1
+      version: '*'
+    - matches:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      name: espressif/ksz80xx
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32, esp32p4]
+      - if: $CONFIG{ETHERNET_PHY_USE_KSZ80XX} == 1
+      version: '*'
+    - matches:
+      - if: $CONFIG{ETHERNET_SPI_USE_KSZ8851SNL} == 1
+      name: espressif/ksz8851snl
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      version: '*'
+    - matches:
+      - if: $CONFIG{ETHERNET_SPI_USE_LAN865X} == 1
+      name: espressif/lan865x
+      registry_url: https://components.espressif.com
+      require: private
+      version: ^0.1.1
+    - name: espressif/lan867x
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32, esp32p4]
+      - if: $CONFIG{ETHERNET_PHY_USE_LAN867X} == 1
+      version: '>=2.0.0'
+    - matches:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      name: espressif/lan87xx
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32, esp32p4]
+      - if: $CONFIG{ETHERNET_PHY_USE_LAN87XX} == 1
+      version: '*'
+    - matches:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      name: espressif/rtl8201
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: target in [esp32, esp32p4]
+      - if: $CONFIG{ETHERNET_PHY_USE_RTL8201} == 1
+      version: '*'
+    - matches:
+      - if: $CONFIG{ETHERNET_SPI_USE_W5500} == 1
+      name: espressif/w5500
+      registry_url: https://components.espressif.com
+      require: private
+      rules:
+      - if: idf_version >=6.0
+        version: ^1.0.0
+      version: '*'
+    - name: idf
+      require: private
+      version: '>=5.4.3,!=5.5.0,!=5.5.1'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.2.0
+  idf:
+    source:
+      type: idf
+    version: 6.0.0
+  protocol_examples_common:
+    dependencies:
+    - name: espressif/ethernet_init
+      rules:
+      - if: target != linux
+      version: ~1.2.0
+    source:
+      path: /Users/apalrd/esp/v6.0/esp-idf/examples/common_components/protocol_examples_common
+      type: local
+    version: '*'
+direct_dependencies:
+- protocol_examples_common
+manifest_hash: 9a9520c926aa0a3e6ab6efa4fb14c3591e654d3887543776c1f730f359b02661
+target: esp32
+version: 2.0.0
