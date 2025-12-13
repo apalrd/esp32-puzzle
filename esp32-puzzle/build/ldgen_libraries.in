@@ -127,8 +127,10 @@ $<TARGET_FILE:idf::esp_driver_spi>
 $<TARGET_FILE:idf::console>
 $<TARGET_FILE:__idf_esp_driver_spi>
 $<TARGET_FILE:idf::esp_eth>
-$<TARGET_FILE:idf::espressif__ethernet_init>
+$<TARGET_FILE:idf::espressif__lan87xx>
 $<TARGET_FILE:__idf_esp_eth>
+$<TARGET_FILE:idf::espressif__ethernet_init>
+$<TARGET_FILE:__idf_espressif__lan87xx>
 $<TARGET_FILE:idf::protocol_examples_common>
 $<TARGET_FILE:__idf_console>
 $<TARGET_FILE:__idf_espressif__ethernet_init>

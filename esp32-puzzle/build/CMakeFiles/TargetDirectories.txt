@@ -635,6 +635,13 @@
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/CMakeFiles/install.dir
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/CMakeFiles/install/local.dir
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/CMakeFiles/install/strip.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/__idf_espressif__lan87xx.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/edit_cache.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/rebuild_cache.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/list_install_components.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/install.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/install/local.dir
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/CMakeFiles/install/strip.dir
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/CMakeFiles/__idf_espressif__ethernet_init.dir
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/CMakeFiles/edit_cache.dir
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/CMakeFiles/rebuild_cache.dir

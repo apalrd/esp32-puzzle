@@ -5192,10 +5192,7 @@
                                 "help": "The minimum rssi to accept in the scan mode.",
                                 "id": "EXAMPLE_WIFI_SCAN_RSSI_THRESHOLD",
                                 "name": "EXAMPLE_WIFI_SCAN_RSSI_THRESHOLD",
-                                "range": [
-                                    -127,
-                                    0
-                                ],
+                                "range": null,
                                 "title": "WiFi minimum rssi",
                                 "type": "int"
                             },
@@ -6070,7 +6067,10 @@
                         "help": "Set the GPIO number used by SMI MDC.",
                         "id": "ETHERNET_MDC_GPIO",
                         "name": "ETHERNET_MDC_GPIO",
-                        "range": null,
+                        "range": [
+                            0,
+                            33
+                        ],
                         "title": "SMI MDC GPIO number",
                         "type": "int"
                     },
@@ -6080,7 +6080,10 @@
                         "help": "Set the GPIO number used by SMI MDIO.",
                         "id": "ETHERNET_MDIO_GPIO",
                         "name": "ETHERNET_MDIO_GPIO",
-                        "range": null,
+                        "range": [
+                            0,
+                            33
+                        ],
                         "title": "SMI MDIO GPIO number",
                         "type": "int"
                     },
@@ -6090,7 +6093,10 @@
                         "help": "Set the GPIO number used to reset PHY chip.\nSet to -1 to disable PHY chip hardware reset.",
                         "id": "ETHERNET_PHY_RST_GPIO",
                         "name": "ETHERNET_PHY_RST_GPIO",
-                        "range": null,
+                        "range": [
+                            -1,
+                            33
+                        ],
                         "title": "PHY Reset GPIO number",
                         "type": "int"
                     },
@@ -6100,7 +6106,10 @@
                         "help": "Set PHY address according your board schematic.",
                         "id": "ETHERNET_PHY_ADDR",
                         "name": "ETHERNET_PHY_ADDR",
-                        "range": null,
+                        "range": [
+                            -1,
+                            31
+                        ],
                         "title": "PHY Address",
                         "type": "int"
                     },

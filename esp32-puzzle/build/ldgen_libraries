@@ -127,8 +127,10 @@
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/console/libconsole.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_driver_spi/libesp_driver_spi.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/libesp_eth.a
-/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/libespressif__ethernet_init.a
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/libespressif__lan87xx.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/libesp_eth.a
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/libespressif__ethernet_init.a
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/libespressif__lan87xx.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/console/libconsole.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/libespressif__ethernet_init.a

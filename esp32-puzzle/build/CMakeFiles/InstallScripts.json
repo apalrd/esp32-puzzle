@@ -88,6 +88,7 @@
 		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/ieee802154/cmake_install.cmake",
 		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/openthread/cmake_install.cmake",
 		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/cmake_install.cmake",
+		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/cmake_install.cmake",
 		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/cmake_install.cmake",
 		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/protocol_examples_common/cmake_install.cmake",
 		"/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/main/cmake_install.cmake"
