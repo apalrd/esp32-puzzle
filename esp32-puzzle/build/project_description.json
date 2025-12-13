@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "esp32-puzzle",
-    "project_version":    "ab63d5a-dirty",
+    "project_version":    "56afbf6-dirty",
     "project_path":       "/Users/apalrd/esp32-puzzle/esp32-puzzle",
     "idf_path":           "/Users/apalrd/esp/v6.0/esp-idf",
     "build_dir":          "/Users/apalrd/esp32-puzzle/esp32-puzzle/build",
