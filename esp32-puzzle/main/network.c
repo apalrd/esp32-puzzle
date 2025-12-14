@@ -20,6 +20,7 @@
 #include "esp_eth.h"
 #include "ethernet_init.h"
 #include "esp_mac.h"
+#include "mdns.h"
 
 #define MAX_IP6_ADDRS_PER_NETIF (5)
 
@@ -69,6 +70,7 @@ static esp_eth_handle_t *s_eth_handles = NULL;
 static uint8_t s_eth_count = 0;
 static esp_eth_netif_glue_handle_t s_eth_glue = NULL;
 static esp_netif_t *s_eth_netif = NULL;
+static char s_hostname[32] = {0};
 
 static esp_netif_t *eth_start(void)
 {
@@ -90,10 +92,9 @@ static esp_netif_t *eth_start(void)
     //Get MAC, generate hostname from last 3 bytes of MAC
     uint8_t mac[6];
     esp_netif_get_mac(s_eth_netif, mac);
-    char hostname[32];
-    snprintf(hostname, sizeof(hostname), "mant1s_%02x%02x%02x", mac[3], mac[4], mac[5]);
-    esp_netif_set_hostname(s_eth_netif, hostname);
-    ESP_LOGI(TAG, "Hostname is %s", hostname);
+    snprintf(s_hostname, sizeof(s_hostname), "mant1s_%02x%02x%02x", mac[3], mac[4], mac[5]);
+    esp_netif_set_hostname(s_eth_netif, s_hostname);
+    ESP_LOGI(TAG, "Hostname is %s", s_hostname);
 
     // Register user defined event handlers
     ESP_ERROR_CHECK(esp_event_handler_register(ETH_EVENT, ETHERNET_EVENT_CONNECTED, &on_eth_event, s_eth_netif));
@@ -163,5 +164,24 @@ esp_err_t eth_connect(void)
     // Print all IPs in TCPIP context to avoid potential races of removing/adding netifs when iterating over the list
     esp_netif_tcpip_exec(print_all_ips_tcpip, NULL);
 
+    //initialize mDNS service
+    esp_err_t err = mdns_init();
+    if (err) {
+        printf("MDNS Init failed: %d\n", err);
+        return err;
+    }
+
+    //set hostname
+    mdns_hostname_set(s_hostname);
+    //add services
+    mdns_service_add(NULL, "_http", "_tcp", 80, NULL, 0);
+    mdns_service_add(NULL, "_ota", "_tcp", 6664, NULL, 0);
+
     return ESP_OK;
+}
+
+
+//Separate function to print hostname, once netconsole is started
+void eth_print_hostname() {
+    ESP_LOGI(TAG, "Hostname: %s", s_hostname);
 }

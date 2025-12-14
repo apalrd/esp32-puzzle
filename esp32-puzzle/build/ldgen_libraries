@@ -114,14 +114,15 @@
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/nvs_flash/libnvs_flash.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/libespressif__ethernet_init.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/libesp_eth.a
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/console/libconsole.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_phy/libesp_phy.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_coex/libesp_coex.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_wifi/libesp_wifi.a
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__mdns/libespressif__mdns.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/console/libconsole.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
-/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/console/libconsole.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/libespressif__ethernet_init.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/main/libmain.a
+/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__mdns/libespressif__mdns.a
 /Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
-/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/libespressif__lan87xx.a

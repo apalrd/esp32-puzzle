@@ -1,5 +1,8 @@
 /* OTA server using basic TCP sockets
-*/
+ * To use, upload via netcat:
+ *  nc <device_ip> 6664 < build/firmware.bin (replace with your project name)
+ * You can use mdns also, such as <hostname>.local
+ */
 #include <string.h>
 #include <sys/param.h>
 #include "freertos/FreeRTOS.h"
@@ -37,6 +40,10 @@ static void do_ota(const int sock)
     //Start OTA session
     esp_ota_begin(update, OTA_SIZE_UNKNOWN, &ota_handle);
 
+    //Print begin to socket
+    const char *start_msg = "OTA Start\r\n";
+    send(sock, start_msg, strlen(start_msg), 0);
+
     //Receive data and feed to OTA
     do {
         len = recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
@@ -50,11 +57,17 @@ static void do_ota(const int sock)
             esp_ota_end(ota_handle);
             //Set boot partition to the newly received one
             esp_err_t err = esp_ota_set_boot_partition(update);
+            //Print error to socket and log
             if (err != ESP_OK) {
                 ESP_LOGE(TAG, "esp_ota_set_boot_partition failed! err=0x%x", err);
+                const char *err_msg = "OTA Failed to set boot partition\r\n";
+                send(sock, err_msg, strlen(err_msg), 0);
                 return;
             }
+            //Success message
             ESP_LOGI(TAG, "OTA complete, rebooting to new partition...");
+            const char *ok_msg = "OTA complete, rebooting...\r\n";
+            send(sock, ok_msg, strlen(ok_msg), 0);
             //Close socket since we won't end this task normally
             shutdown(sock, 0);
             close(sock);

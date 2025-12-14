@@ -283,6 +283,8 @@ void app_main(void)
     netconsole_init();
     void ota_init(void);
     ota_init();
+    void eth_print_hostname(void);
+    eth_print_hostname();
 
     xTaskCreate(&mcast_example_task, "mcast_task", 8192, NULL, 5, NULL);
 }

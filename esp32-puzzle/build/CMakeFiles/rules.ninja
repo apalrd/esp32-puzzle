@@ -1146,6 +1146,25 @@ rule C_STATIC_LIBRARY_LINKER____idf_espressif__ethernet_init_
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER____idf_console_unscanned_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}/Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER____idf_console_
+  command = $PRE_LINK && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E rm -f $TARGET_FILE && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib $TARGET_FILE && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER____idf_esp_phy_unscanned_
   depfile = $DEP_FILE
   deps = gcc
@@ -1222,7 +1241,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_esp_wifi_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER____idf_console_unscanned_
+rule C_COMPILER____idf_espressif__mdns_unscanned_
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}/Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -1232,7 +1251,7 @@ rule C_COMPILER____idf_console_unscanned_
 #############################################
 # Rule for linking C static library.
 
-rule C_STATIC_LIBRARY_LINKER____idf_console_
+rule C_STATIC_LIBRARY_LINKER____idf_espressif__mdns_
   command = $PRE_LINK && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E rm -f $TARGET_FILE && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib $TARGET_FILE && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -1281,25 +1300,6 @@ rule C_COMPILER____idf_main_unscanned_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER____idf_main_
-  command = $PRE_LINK && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E rm -f $TARGET_FILE && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib $TARGET_FILE && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER____idf_espressif__lan87xx_unscanned_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}/Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER____idf_espressif__lan87xx_
   command = $PRE_LINK && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E rm -f $TARGET_FILE && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc $TARGET_FILE $LINK_FLAGS $in && /Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib $TARGET_FILE && /Users/apalrd/.espressif/tools/cmake/4.0.3/CMake.app/Contents/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
