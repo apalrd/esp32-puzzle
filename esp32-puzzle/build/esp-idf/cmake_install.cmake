@@ -279,6 +279,21 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_event/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_driver_spi/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_ringbuf/cmake_install.cmake")
 endif()
 
@@ -304,36 +319,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_event/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/http_parser/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp-tls/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/tcp_transport/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_http_client/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_https_ota/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_netif_stack/cmake_install.cmake")
 endif()
 
@@ -350,6 +335,16 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/nvs_flash/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_psram/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -374,16 +369,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_driver_spi/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_psram/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/console/cmake_install.cmake")
 endif()
 
@@ -399,27 +384,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_eth/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/protocol_examples_common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/main/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__lan87xx/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT

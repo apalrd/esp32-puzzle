@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "esp32-puzzle",
-    "project_version":    "56afbf6-dirty",
+    "project_version":    "e5f2adb-dirty",
     "project_path":       "/Users/apalrd/esp32-puzzle/esp32-puzzle",
     "idf_path":           "/Users/apalrd/esp/v6.0/esp-idf",
     "build_dir":          "/Users/apalrd/esp32-puzzle/esp32-puzzle/build",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "xtensa-esp32-elf-",
     "c_compiler":         "/Users/apalrd/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "/Users/apalrd/esp/v6.0/esp-idf/components/console/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/efuse/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_coex/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_common/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_gpio/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_spi/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_uart/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_usb_serial_jtag/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_eth/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_event/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_https_ota/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_hw_support/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_libc/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_mm/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_netif/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_partition/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_phy/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_pm/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_psram/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_ringbuf/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_rom/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_security/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_stdio/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_system/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_timer/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_wifi/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/freertos/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/hal/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/heap/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/ieee802154/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/log/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/lwip/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/mbedtls/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/nvs_flash/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/nvs_sec_provider/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/openthread/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/pthread/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/soc/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/vfs/Kconfig",
+        "COMPONENT_KCONFIGS" : "/Users/apalrd/esp/v6.0/esp-idf/components/console/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/efuse/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_coex/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_common/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_gpio/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_spi/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_uart/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_usb_serial_jtag/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_eth/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_event/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_hw_support/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_libc/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_mm/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_netif/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_partition/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_phy/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_pm/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_psram/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_ringbuf/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_rom/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_security/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_stdio/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_system/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_timer/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/esp_wifi/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/freertos/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/hal/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/heap/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/ieee802154/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/log/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/lwip/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/mbedtls/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/nvs_flash/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/nvs_sec_provider/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/openthread/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/pthread/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/soc/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/Kconfig;/Users/apalrd/esp/v6.0/esp-idf/components/vfs/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "/Users/apalrd/esp/v6.0/esp-idf/components/bootloader/Kconfig.projbuild;/Users/apalrd/esp/v6.0/esp-idf/components/esp_app_format/Kconfig.projbuild;/Users/apalrd/esp/v6.0/esp-idf/components/esp_rom/Kconfig.projbuild;/Users/apalrd/esp/v6.0/esp-idf/components/esptool_py/Kconfig.projbuild;/Users/apalrd/esp/v6.0/esp-idf/components/partition_table/Kconfig.projbuild;/Users/apalrd/esp32-puzzle/esp32-puzzle/main/Kconfig.projbuild;/Users/apalrd/esp/v6.0/esp-idf/examples/common_components/protocol_examples_common/Kconfig.projbuild;/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__ethernet_init/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "esp_libc", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "esp_stdio", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "console", "cxx", "efuse", "esp-tls", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_gpio", "esp_driver_spi", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_eth", "esp_event", "esp_hal_ana_conv", "esp_hal_cam", "esp_hal_dma", "esp_hal_gpio", "esp_hal_i2c", "esp_hal_i2s", "esp_hal_lcd", "esp_hal_mcpwm", "esp_hal_mspi", "esp_hal_parlio", "esp_hal_pcnt", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_twai", "esp_hal_usb", "esp_hal_wdt", "esp_http_client", "esp_https_ota", "esp_hw_support", "esp_libc", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esp_wifi", "espressif__ethernet_init", "espressif__lan87xx", "esptool_py", "freertos", "hal", "heap", "http_parser", "ieee802154", "log", "lwip", "main", "mbedtls", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "protocol_examples_common", "pthread", "soc", "spi_flash", "tcp_transport", "vfs", "wpa_supplicant", "xtensa", "" ],
-    "build_component_paths" : [ "/Users/apalrd/esp/v6.0/esp-idf/components/app_update", "/Users/apalrd/esp/v6.0/esp-idf/components/bootloader", "/Users/apalrd/esp/v6.0/esp-idf/components/bootloader_support", "/Users/apalrd/esp/v6.0/esp-idf/components/console", "/Users/apalrd/esp/v6.0/esp-idf/components/cxx", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse", "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_app_format", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_blockdev", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_bootloader_format", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_coex", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_common", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_gpio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_spi", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_uart", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_usb_serial_jtag", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_eth", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_event", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_ana_conv", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_cam", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_dma", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_gpio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_i2c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_i2s", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_lcd", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_mcpwm", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_mspi", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_parlio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_pcnt", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_timg", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_touch_sens", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_twai", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_usb", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_wdt", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_https_ota", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hw_support", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_libc", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_mm", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_netif", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_netif_stack", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_partition", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_phy", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_pm", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_psram", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_ringbuf", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_rom", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_security", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_stdio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_system", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_timer", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_usb_cdc_rom_console", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_wifi", "/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__ethernet_init", "/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__lan87xx", "/Users/apalrd/esp/v6.0/esp-idf/components/esptool_py", "/Users/apalrd/esp/v6.0/esp-idf/components/freertos", "/Users/apalrd/esp/v6.0/esp-idf/components/hal", "/Users/apalrd/esp/v6.0/esp-idf/components/heap", "/Users/apalrd/esp/v6.0/esp-idf/components/http_parser", "/Users/apalrd/esp/v6.0/esp-idf/components/ieee802154", "/Users/apalrd/esp/v6.0/esp-idf/components/log", "/Users/apalrd/esp/v6.0/esp-idf/components/lwip", "/Users/apalrd/esp32-puzzle/esp32-puzzle/main", "/Users/apalrd/esp/v6.0/esp-idf/components/mbedtls", "/Users/apalrd/esp/v6.0/esp-idf/components/nvs_flash", "/Users/apalrd/esp/v6.0/esp-idf/components/nvs_sec_provider", "/Users/apalrd/esp/v6.0/esp-idf/components/openthread", "/Users/apalrd/esp/v6.0/esp-idf/components/partition_table", "/Users/apalrd/esp/v6.0/esp-idf/examples/common_components/protocol_examples_common", "/Users/apalrd/esp/v6.0/esp-idf/components/pthread", "/Users/apalrd/esp/v6.0/esp-idf/components/soc", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash", "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport", "/Users/apalrd/esp/v6.0/esp-idf/components/vfs", "/Users/apalrd/esp/v6.0/esp-idf/components/wpa_supplicant", "/Users/apalrd/esp/v6.0/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "console", "cxx", "efuse", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_gpio", "esp_driver_spi", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_eth", "esp_event", "esp_hal_ana_conv", "esp_hal_cam", "esp_hal_dma", "esp_hal_gpio", "esp_hal_i2c", "esp_hal_i2s", "esp_hal_lcd", "esp_hal_mcpwm", "esp_hal_mspi", "esp_hal_parlio", "esp_hal_pcnt", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_twai", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esp_wifi", "espressif__ethernet_init", "espressif__lan87xx", "esptool_py", "freertos", "hal", "heap", "ieee802154", "log", "lwip", "main", "mbedtls", "nvs_flash", "nvs_sec_provider", "openthread", "partition_table", "protocol_examples_common", "pthread", "soc", "spi_flash", "vfs", "wpa_supplicant", "xtensa", "" ],
+    "build_component_paths" : [ "/Users/apalrd/esp/v6.0/esp-idf/components/app_update", "/Users/apalrd/esp/v6.0/esp-idf/components/bootloader", "/Users/apalrd/esp/v6.0/esp-idf/components/bootloader_support", "/Users/apalrd/esp/v6.0/esp-idf/components/console", "/Users/apalrd/esp/v6.0/esp-idf/components/cxx", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_app_format", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_blockdev", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_bootloader_format", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_coex", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_common", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_gpio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_spi", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_uart", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_driver_usb_serial_jtag", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_eth", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_event", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_ana_conv", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_cam", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_dma", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_gpio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_i2c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_i2s", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_lcd", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_mcpwm", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_mspi", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_parlio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_pcnt", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_timg", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_touch_sens", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_twai", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_usb", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_wdt", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hw_support", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_libc", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_mm", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_netif", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_netif_stack", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_partition", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_phy", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_pm", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_psram", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_ringbuf", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_rom", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_security", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_stdio", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_system", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_timer", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_usb_cdc_rom_console", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_wifi", "/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__ethernet_init", "/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__lan87xx", "/Users/apalrd/esp/v6.0/esp-idf/components/esptool_py", "/Users/apalrd/esp/v6.0/esp-idf/components/freertos", "/Users/apalrd/esp/v6.0/esp-idf/components/hal", "/Users/apalrd/esp/v6.0/esp-idf/components/heap", "/Users/apalrd/esp/v6.0/esp-idf/components/ieee802154", "/Users/apalrd/esp/v6.0/esp-idf/components/log", "/Users/apalrd/esp/v6.0/esp-idf/components/lwip", "/Users/apalrd/esp32-puzzle/esp32-puzzle/main", "/Users/apalrd/esp/v6.0/esp-idf/components/mbedtls", "/Users/apalrd/esp/v6.0/esp-idf/components/nvs_flash", "/Users/apalrd/esp/v6.0/esp-idf/components/nvs_sec_provider", "/Users/apalrd/esp/v6.0/esp-idf/components/openthread", "/Users/apalrd/esp/v6.0/esp-idf/components/partition_table", "/Users/apalrd/esp/v6.0/esp-idf/examples/common_components/protocol_examples_common", "/Users/apalrd/esp/v6.0/esp-idf/components/pthread", "/Users/apalrd/esp/v6.0/esp-idf/components/soc", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash", "/Users/apalrd/esp/v6.0/esp-idf/components/vfs", "/Users/apalrd/esp/v6.0/esp-idf/components/wpa_supplicant", "/Users/apalrd/esp/v6.0/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -117,21 +117,6 @@
             "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/efuse/libefuse.a",
             "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/esp32/esp_efuse_table.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/esp32/esp_efuse_fields.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/esp32/esp_efuse_utility.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/src/esp_efuse_api.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/src/esp_efuse_fields.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/src/esp_efuse_utility.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/src/efuse_controller/keys/without_key_purposes/three_key_blocks/esp_efuse_api_key.c", "/Users/apalrd/esp/v6.0/esp-idf/components/efuse/src/esp_efuse_startup.c" ],
             "include_dirs": [ "include", "esp32/include" ]
-        },
-        "esp-tls": {
-            "alias": "idf::esp-tls",
-            "target": "___idf_esp-tls",
-            "prefix": "idf",
-            "dir": "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls",
-            "type": "LIBRARY",
-            "lib": "__idf_esp-tls",
-            "reqs": [ "mbedtls" ],
-            "priv_reqs": [ "http_parser", "esp_timer", "lwip" ],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp-tls/libesp-tls.a",
-            "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls/esp_tls.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls/esp-tls-crypto/esp_tls_crypto.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls/esp_tls_error_capture.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls/esp_tls_platform_port.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls/esp_tls_mbedtls.c" ],
-            "include_dirs": [ "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls", "esp-tls-crypto" ]
         },
         "esp_app_format": {
             "alias": "idf::esp_app_format",
@@ -538,36 +523,6 @@
             "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_wdt/esp32/mwdt_periph.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_hal_wdt/wdt_hal_iram.c" ],
             "include_dirs": [ "include", "esp32/include" ]
         },
-        "esp_http_client": {
-            "alias": "idf::esp_http_client",
-            "target": "___idf_esp_http_client",
-            "prefix": "idf",
-            "dir": "/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client",
-            "type": "LIBRARY",
-            "lib": "__idf_esp_http_client",
-            "reqs": [ "lwip", "esp_event" ],
-            "priv_reqs": [ "tcp_transport", "http_parser" ],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_http_client/libesp_http_client.a",
-            "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client/esp_http_client.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client/lib/http_auth.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client/lib/http_header.c", "/Users/apalrd/esp/v6.0/esp-idf/components/esp_http_client/lib/http_utils.c" ],
-            "include_dirs": [ "include" ]
-        },
-        "esp_https_ota": {
-            "alias": "idf::esp_https_ota",
-            "target": "___idf_esp_https_ota",
-            "prefix": "idf",
-            "dir": "/Users/apalrd/esp/v6.0/esp-idf/components/esp_https_ota",
-            "type": "LIBRARY",
-            "lib": "__idf_esp_https_ota",
-            "reqs": [ "esp_http_client", "bootloader_support", "esp_bootloader_format", "esp_app_format", "esp_event", "esp_partition" ],
-            "priv_reqs": [ "log", "app_update" ],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/esp_https_ota/libesp_https_ota.a",
-            "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/esp_https_ota/src/esp_https_ota.c" ],
-            "include_dirs": [ "include" ]
-        },
         "esp_hw_support": {
             "alias": "idf::esp_hw_support",
             "target": "___idf_esp_hw_support",
@@ -831,9 +786,9 @@
             "type": "LIBRARY",
             "lib": "__idf_espressif__ethernet_init",
             "reqs": [],
-            "priv_reqs": [ "esp_driver_gpio", "esp_driver_spi", "esp_eth", "espressif__lan87xx" ],
+            "priv_reqs": [ "esp_driver_gpio", "esp_driver_spi", "esp_eth" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [ "espressif__lan87xx" ],
+            "managed_priv_reqs": [],
             "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/espressif__ethernet_init/libespressif__ethernet_init.a",
             "sources": [ "/Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__ethernet_init/ethernet_init.c" ],
             "include_dirs": [ "." ]
@@ -913,21 +868,6 @@
             "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/heap/heap_caps_base.c", "/Users/apalrd/esp/v6.0/esp-idf/components/heap/heap_caps.c", "/Users/apalrd/esp/v6.0/esp-idf/components/heap/heap_caps_init.c", "/Users/apalrd/esp/v6.0/esp-idf/components/heap/multi_heap.c", "/Users/apalrd/esp/v6.0/esp-idf/components/heap/tlsf/tlsf.c", "/Users/apalrd/esp/v6.0/esp-idf/components/heap/port/memory_layout_utils.c", "/Users/apalrd/esp/v6.0/esp-idf/components/heap/port/esp32/memory_layout.c" ],
             "include_dirs": [ "include", "tlsf" ]
         },
-        "http_parser": {
-            "alias": "idf::http_parser",
-            "target": "___idf_http_parser",
-            "prefix": "idf",
-            "dir": "/Users/apalrd/esp/v6.0/esp-idf/components/http_parser",
-            "type": "LIBRARY",
-            "lib": "__idf_http_parser",
-            "reqs": [],
-            "priv_reqs": [],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/http_parser/libhttp_parser.a",
-            "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/http_parser/http_parser.c" ],
-            "include_dirs": [ "." ]
-        },
         "ieee802154": {
             "alias": "idf::ieee802154",
             "target": "___idf_ieee802154",
@@ -981,11 +921,11 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "esp_http_client", "app_update", "esp_https_ota", "esp_netif", "mbedtls", "nvs_flash", "esp_wifi", "esp_psram", "protocol_examples_common" ],
+            "priv_reqs": [ "app_update", "esp_eth", "esp_netif", "nvs_flash", "esp_psram", "espressif__ethernet_init", "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
             "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/main/libmain.a",
-            "sources": [ "/Users/apalrd/esp32-puzzle/esp32-puzzle/main/simple_ota_example.c", "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/ca_cert.pem.S" ],
+            "sources": [ "/Users/apalrd/esp32-puzzle/esp32-puzzle/main/main.c", "/Users/apalrd/esp32-puzzle/esp32-puzzle/main/network.c", "/Users/apalrd/esp32-puzzle/esp32-puzzle/main/netconsole.c", "/Users/apalrd/esp32-puzzle/esp32-puzzle/main/ota.c", "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/ca_cert.pem.S" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -1121,21 +1061,6 @@
             "managed_priv_reqs": [],
             "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/spi_flash/libspi_flash.a",
             "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/flash_brownout_hook.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_drivers.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_generic.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_issi.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_mxic.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_gd.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_winbond.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_boya.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_mxic_opi.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_chip_th.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/memspi_host_driver.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_blockdev.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/cache_utils.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/flash_mmap.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/flash_ops.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_wrap.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/esp_flash_api.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/esp_flash_spi_init.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_os_func_app.c", "/Users/apalrd/esp/v6.0/esp-idf/components/spi_flash/spi_flash_os_func_noos.c" ],
-            "include_dirs": [ "include" ]
-        },
-        "tcp_transport": {
-            "alias": "idf::tcp_transport",
-            "target": "___idf_tcp_transport",
-            "prefix": "idf",
-            "dir": "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport",
-            "type": "LIBRARY",
-            "lib": "__idf_tcp_transport",
-            "reqs": [ "esp-tls", "lwip", "esp_timer" ],
-            "priv_reqs": [],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/Users/apalrd/esp32-puzzle/esp32-puzzle/build/esp-idf/tcp_transport/libtcp_transport.a",
-            "sources": [ "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport/transport.c", "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport/transport_ssl.c", "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport/transport_internal.c", "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport/transport_socks_proxy.c", "/Users/apalrd/esp/v6.0/esp-idf/components/tcp_transport/transport_ws.c" ],
             "include_dirs": [ "include" ]
         },
         "vfs": {
@@ -1326,7 +1251,7 @@
             "priv_reqs": [ "http_parser", "esp_timer", "lwip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "/Users/apalrd/esp/v6.0/esp-idf/components/esp-tls", "esp-tls-crypto" ]
+            "include_dirs": [ "/Users/apalrd/esp32-puzzle/esp32-puzzle/build", "esp-tls-crypto" ]
         },
         "esp_adc": {
             "alias": "idf::esp_adc",
@@ -2818,7 +2743,7 @@
             "source": "project_components",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [ "esp_http_client", "app_update", "esp_https_ota", "esp_netif", "mbedtls", "nvs_flash", "esp_wifi", "esp_psram", "protocol_examples_common" ],
+            "priv_reqs": [ "app_update", "esp_eth", "esp_netif", "nvs_flash", "esp_psram", "espressif__ethernet_init", "protocol_examples_common" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "protocol_examples_common" ],
             "include_dirs": [ "." ]
@@ -2844,9 +2769,9 @@
             "source": "project_managed_components",
             "lib": "__idf_espressif__ethernet_init",
             "reqs": [],
-            "priv_reqs": [ "esp_driver_gpio", "esp_driver_spi", "esp_eth", "espressif__lan87xx" ],
+            "priv_reqs": [ "esp_driver_gpio", "esp_driver_spi", "esp_eth" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [ "espressif__lan87xx" ],
+            "managed_priv_reqs": [],
             "include_dirs": [ "." ]
         },
         "espressif__lan87xx": {

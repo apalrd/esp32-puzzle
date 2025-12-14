@@ -939,29 +939,6 @@ CONFIG_EFUSE_MAX_BLK_LEN=192
 # end of eFuse Bit Manager
 
 #
-# ESP-TLS
-#
-# default:
-CONFIG_ESP_TLS_USING_MBEDTLS=y
-# default:
-# CONFIG_ESP_TLS_USE_SECURE_ELEMENT is not set
-# default:
-# CONFIG_ESP_TLS_CLIENT_SESSION_TICKETS is not set
-# default:
-# CONFIG_ESP_TLS_SERVER_SESSION_TICKETS is not set
-# default:
-# CONFIG_ESP_TLS_SERVER_CERT_SELECT_HOOK is not set
-# default:
-# CONFIG_ESP_TLS_SERVER_MIN_AUTH_MODE_OPTIONAL is not set
-# default:
-# CONFIG_ESP_TLS_PSK_VERIFICATION is not set
-# default:
-# CONFIG_ESP_TLS_INSECURE is not set
-# default:
-CONFIG_ESP_TLS_DYN_BUF_STRATEGY_SUPPORTED=y
-# end of ESP-TLS
-
-#
 # Wireless Coexistence
 #
 # default:
@@ -1045,35 +1022,6 @@ CONFIG_ESP_EVENT_POST_FROM_ISR=y
 # default:
 CONFIG_ESP_EVENT_POST_FROM_IRAM_ISR=y
 # end of Event Loop Library
-
-#
-# ESP HTTP client
-#
-# default:
-CONFIG_ESP_HTTP_CLIENT_ENABLE_HTTPS=y
-# default:
-# CONFIG_ESP_HTTP_CLIENT_ENABLE_BASIC_AUTH is not set
-# default:
-# CONFIG_ESP_HTTP_CLIENT_ENABLE_DIGEST_AUTH is not set
-# default:
-# CONFIG_ESP_HTTP_CLIENT_ENABLE_CUSTOM_TRANSPORT is not set
-# default:
-# CONFIG_ESP_HTTP_CLIENT_ENABLE_GET_CONTENT_RANGE is not set
-# default:
-CONFIG_ESP_HTTP_CLIENT_EVENT_POST_TIMEOUT=2000
-# end of ESP HTTP client
-
-#
-# ESP HTTPS OTA
-#
-# default:
-# CONFIG_ESP_HTTPS_OTA_DECRYPT_CB is not set
-CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP=y
-# default:
-CONFIG_ESP_HTTPS_OTA_EVENT_POST_TIMEOUT=2000
-# default:
-# CONFIG_ESP_HTTPS_OTA_ENABLE_PARTIAL_DOWNLOAD is not set
-# end of ESP HTTPS OTA
 
 #
 # Hardware Settings
@@ -2782,22 +2730,6 @@ CONFIG_SPI_FLASH_ENABLE_ENCRYPTED_READ_WRITE=y
 # end of SPI Flash driver
 
 #
-# TCP Transport
-#
-
-#
-# Websocket
-#
-# default:
-CONFIG_WS_TRANSPORT=y
-# default:
-CONFIG_WS_BUFFER_SIZE=1024
-# default:
-# CONFIG_WS_DYNAMIC_BUFFER is not set
-# end of Websocket
-# end of TCP Transport
-
-#
 # Virtual file system
 #
 # default:
@@ -2882,7 +2814,6 @@ CONFIG_STACK_CHECK_NONE=y
 # CONFIG_EVENT_LOOP_PROFILING is not set
 CONFIG_POST_EVENTS_FROM_ISR=y
 CONFIG_POST_EVENTS_FROM_IRAM_ISR=y
-CONFIG_OTA_ALLOW_HTTP=y
 # CONFIG_TWO_UNIVERSAL_MAC_ADDRESS is not set
 CONFIG_FOUR_UNIVERSAL_MAC_ADDRESS=y
 CONFIG_NUMBER_OF_UNIVERSAL_MAC_ADDRESS=4

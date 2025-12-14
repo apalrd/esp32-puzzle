@@ -29,6 +29,8 @@
 #endif
 
 #define HASH_LEN 32
+#undef EXAMPLE_NETIF_DESC_ETH
+#define EXAMPLE_NETIF_DESC_ETH "eth_t1s"
 
 #ifdef CONFIG_EXAMPLE_FIRMWARE_UPGRADE_BIND_IF
 /* The interface name value can refer to if_desc in esp_netif_defaults.h */
@@ -201,7 +203,8 @@ void app_main(void)
      * Read "Establishing Wi-Fi or Ethernet Connection" section in
      * examples/protocols/README.md for more information about this function.
      */
-    ESP_ERROR_CHECK(example_connect());
+    esp_err_t eth_connect(void);
+    ESP_ERROR_CHECK(eth_connect());
 
 #if CONFIG_EXAMPLE_CONNECT_WIFI
     /* Ensure to disable any WiFi power save mode, this allows best throughput
