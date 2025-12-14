@@ -132,6 +132,13 @@ static void ota_server_task(void *pvParameters)
             ESP_LOGE(TAG, "Unable to accept connection: errno %d", errno);
             break;
         }
+
+        /* Set TCP_NODELAY since we are sending small status messages */
+        int tcp_nodelay = 1;
+        if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, &tcp_nodelay, sizeof(tcp_nodelay)) < 0) {
+            ESP_LOGW(TAG, "setsockopt TCP_NODELAY failed: errno %d", errno);
+        }
+
         // Convert ip address to string
         if (source_addr.ss_family == PF_INET6) {
             inet6_ntoa_r(((struct sockaddr_in6 *)&source_addr)->sin6_addr, addr_str, sizeof(addr_str) - 1);
