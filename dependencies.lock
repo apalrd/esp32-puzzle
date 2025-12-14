@@ -1,0 +1,35 @@
+dependencies:
+  espressif/ethernet_init:
+    dependencies: []
+    source:
+      path: /Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__ethernet_init
+      type: local
+    version: 1.2.0
+  espressif/mdns:
+    dependencies: []
+    source:
+      path: /Users/apalrd/esp32-puzzle/esp32-puzzle/managed_components/espressif__mdns
+      type: local
+    version: 1.9.1
+  idf:
+    source:
+      type: idf
+    version: 6.0.0
+  protocol_examples_common:
+    dependencies:
+    - name: espressif/ethernet_init
+      rules:
+      - if: target != linux
+      version: ~1.2.0
+    source:
+      path: /Users/apalrd/esp/v6.0/esp-idf/examples/common_components/protocol_examples_common
+      type: local
+    version: '*'
+direct_dependencies:
+- espressif/ethernet_init
+- espressif/mdns
+- idf
+- protocol_examples_common
+manifest_hash: 6f9bca2a7cefbcef38df114ab1903b7a594aa90b8bc805f693ac6802e0cb2e81
+target: esp32
+version: 2.0.0
