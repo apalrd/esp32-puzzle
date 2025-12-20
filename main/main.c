@@ -10,6 +10,7 @@
 #include "nvs_flash.h"
 #include "esp_netif.h"
 #include "protocol_examples_common.h"
+#include "driver/gpio.h"
 
 #include "lwip/err.h"
 #include "lwip/sockets.h"
@@ -26,6 +27,12 @@ static const char *TAG = "main";
 //Group and port numbers
 #define UDP_PORT 6969
 #define MULTICAST_GROUP "ff02::6969"
+
+/* game input and output pins */
+#define PIN_BTN_COUNT 4
+static const int pin_btn[PIN_BTN_COUNT] = { 36, 37, 38, 39 };
+#define PIN_LED_COUNT 6
+static const int pin_led[PIN_LED_COUNT] = {14, 12, 13, 15, 2, 4};
 
 /* game_state for puzzling */
 enum game_phase_t {
@@ -44,17 +51,41 @@ enum game_phase_t {
 
 /* Structure we will pass around the network */
 struct game_data_t {
-    uint32_t seq_number;
-    uint8_t active;
-    uint8_t btn[4];
-    uint8_t btn_read[4];
-    uint8_t phase;
-    uint8_t leader;
+    uint32_t seq_number;    //Increments whenever state is modified
+    uint8_t active;         //Tag received
+    uint8_t btn;            //Current button press (= 0 no button, 255 = multiples)
+    uint8_t phase;          //Current phase
 };
 
+/* Global state data modified by funcs */
 static struct game_data_t my_data, their_data;
 static int their_ts;
 static struct frame_t mcast_frame;
+
+
+/* Config GPIO inputs */
+static void game_io_config()
+{
+    //
+
+gpio_config_t io_conf = {
+    .pin_bit_mask = (1ULL << BUTTON_PIN),   // Select GPIO 4
+    .mode = GPIO_MODE_INPUT,                  // Set as input
+    .pull_up_en = GPIO_PULLUP_ENABLE,     // Enable internal pull-up
+    .pull_down_en = GPIO_PULLDOWN_DISABLE, // Disable pull-down
+    .intr_type = GPIO_INTR_DISABLE        // Disable interrupts
+};
+gpio_config(&io_conf);
+
+}
+
+/* Read GPIO inputs / debounce */
+static void game_inputs()
+{
+    /* Input GPIOs */
+    my_data.btn = 0;
+    
+}
 
 void game_logic() 
 {
