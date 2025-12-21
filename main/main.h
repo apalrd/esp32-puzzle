@@ -19,3 +19,6 @@ struct frame_t {
 int frame_init(struct frame_t *frame, char *mcast_group, int port);
 int frame_recv(struct frame_t *frame, char *buf, size_t len, int *time);
 int frame_send(struct frame_t *frame, const char *data, size_t len);
+
+/* rfid.c */
+void rfid_init(void);

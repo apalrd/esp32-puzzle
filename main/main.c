@@ -30,9 +30,9 @@ static const char *TAG = "main";
 
 /* game input and output pins */
 #define PIN_BTN_COUNT 4
-static const int pin_btn[PIN_BTN_COUNT] = { 36, 37, 38, 39 };
+//static const int pin_btn[PIN_BTN_COUNT] = { 36, 37, 38, 39 };
 #define PIN_LED_COUNT 6
-static const int pin_led[PIN_LED_COUNT] = {14, 12, 13, 15, 2, 4};
+//static const int pin_led[PIN_LED_COUNT] = {14, 12, 13, 15, 2, 4};
 
 /* game_state for puzzling */
 enum game_phase_t {
@@ -55,6 +55,7 @@ struct game_data_t {
     uint8_t active;         //Tag received
     uint8_t btn;            //Current button press (= 0 no button, 255 = multiples)
     uint8_t phase;          //Current phase
+    uint8_t leader;
 };
 
 /* Global state data modified by funcs */
@@ -64,10 +65,10 @@ static struct frame_t mcast_frame;
 
 
 /* Config GPIO inputs */
-static void game_io_config()
+static void io_config()
 {
     //
-
+#if 0
 gpio_config_t io_conf = {
     .pin_bit_mask = (1ULL << BUTTON_PIN),   // Select GPIO 4
     .mode = GPIO_MODE_INPUT,                  // Set as input
@@ -76,15 +77,21 @@ gpio_config_t io_conf = {
     .intr_type = GPIO_INTR_DISABLE        // Disable interrupts
 };
 gpio_config(&io_conf);
-
+#endif
 }
 
 /* Read GPIO inputs / debounce */
-static void game_inputs()
+static void io_input()
 {
     /* Input GPIOs */
     my_data.btn = 0;
     
+}
+
+/* Process LED outputs */
+static void io_output()
+{
+
 }
 
 void game_logic() 
@@ -95,11 +102,10 @@ void game_logic()
     /* Check if we have a new frame from them */
     if (their_data.seq_number > my_data.seq_number) 
     {
-        ESP_LOGI(TAG, "Received frame %d phase %d active %d leader %d ts %d",
+        ESP_LOGI(TAG, "Received frame %d phase %d active %d ts %d",
                  their_data.seq_number,
                  their_data.phase,
                  their_data.active,
-                 their_data.leader,
                  their_ts);
         /* Copy data to our struct */
         my_data.phase = their_data.phase;
@@ -111,85 +117,10 @@ void game_logic()
     my_data.active = 1; //for testing
     /* Set the leader based on which RFID tag is passed */
 
-    /* Read all four buttons and debounce*/
-    static int btn_last[4] = {0};
-    for (int i = 0; i < 4; i++) {
-        my_data.btn_read[i] = 0; //TODO: read actual button state
-        my_data.btn[i] = (my_data.btn_read[i] && !btn_last[i]) ? 1 : 0;
-        btn_last[i] = my_data.btn_read[i];
-    }
+
 
     int changed = 0;
-    /* Reset leader state if we are inactive */
-    if(my_data.phase < PHASE_IDLE) {
-        my_data.leader = 0;
-    }
-    /* If we are not active and in a phase where we should be active, change our state */
-    else if (!my_data.active && my_data.phase >= PHASE_IDLE) {
-        my_data.phase = PHASE_INACTIVE;
-        changed = 1;
-    }
-    /* If we are active and they are active, and we are not idle, go to idle */
-    else if (my_data.active && their_data.active && my_data.phase < PHASE_IDLE) {
-        my_data.phase = PHASE_IDLE;
-        changed = 1;
-        
-    }
-    /* If they are a leader and we are a leader, go back to error state */
-    else if (my_data.leader && their_data.leader && my_data.phase >= PHASE_IDLE) {
-        my_data.phase = PHASE_INCORRECT;
-        changed = 1;
-    }
-    /* If we are in idle, and are the leader, and btn3 is pressed, go to leader1 */
-    else if(my_data.phase == PHASE_IDLE && my_data.leader && my_data.btn[2]) {
-        my_data.phase = PHASE_LEADER1;
-        changed = 1;
-    }
-    /* If we are in leader1 and not the leader and btn2 is pressed, go to follow1 */
-    else if(my_data.phase == PHASE_LEADER1 && !my_data.leader && my_data.btn[1]) {
-        my_data.phase = PHASE_FOLLOW1;
-        changed = 1;
-    }
-    /* If we are in follow1 and are the leader and btn4 is pressed, go to leader2 */
-    else if(my_data.phase == PHASE_FOLLOW1 && my_data.leader && my_data.btn[3]) {
-        my_data.phase = PHASE_LEADER2;
-        changed = 1;
-    }
-    /* If we are in leader2 and not the leader and btn1 is pressed, go to follow2 */
-    else if(my_data.phase == PHASE_LEADER2 && !my_data.leader && my_data.btn[0]) {
-        my_data.phase = PHASE_FOLLOW2;
-        changed = 1;
-    }
-    /* If we are in follow2 and the leader and btn2 is pressed, go to leader3 */
-    else if(my_data.phase == PHASE_FOLLOW2 && my_data.leader && my_data.btn[1]) {
-        my_data.phase = PHASE_LEADER3;
-        changed = 1;
-    }
-    /* If we are in leader3 and not the leader and btn3 is pressed, go to follow3 */
-    else if(my_data.phase == PHASE_LEADER3 && !my_data.leader && my_data.btn[2]) {
-        my_data.phase = PHASE_FOLLOW3;
-        changed = 1;
-    }
-    /* If we are in follow3 and the leader and btn1 is pressed, go to leader4 */
-    else if(my_data.phase == PHASE_FOLLOW3 && my_data.leader && my_data.btn[0]) {
-        my_data.phase = PHASE_LEADER4;
-        changed = 1;
-    }
-    /* If we are in leader4 and not the leader and btn4 is pressed, go to follow4 */
-    else if(my_data.phase == PHASE_LEADER4 && !my_data.leader && my_data.btn[3]) {
-        my_data.phase = PHASE_FOLLOW4_COMPLETED;
-        changed = 1;
-    }
-    /* If any button is pressed and we are in idle or above, go to incorrect */
-    if(my_data.phase >= PHASE_IDLE) {
-        for (int i = 0; i < 4; i++) {
-            if (my_data.btn[i]) {
-                my_data.phase = PHASE_INCORRECT;
-                changed = 1;
-                break;
-            }
-        }
-    }
+ 
 
     /* If we changed any data, increment sequence number */
     if (changed) {
@@ -233,6 +164,7 @@ void app_main(void)
     eth_print_hostname();
 
     /* Run game logic */
+    rfid_init();
     frame_init(&mcast_frame, MULTICAST_GROUP, UDP_PORT);
     while (1) {
         game_logic();

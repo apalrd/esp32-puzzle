@@ -2,4 +2,4 @@ dependencies:
   protocol_examples_common:
     path: ${IDF_PATH}/examples/common_components/protocol_examples_common
   espressif/mdns: '*'
-  abobija/rc522: '*'
+  abobija/rc522: ^3.4.3

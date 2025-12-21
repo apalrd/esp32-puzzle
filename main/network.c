@@ -74,7 +74,7 @@ static char s_hostname[32] = {0};
 
 static esp_netif_t *eth_start(void)
 {
-    ESP_ERROR_CHECK(ethernet_init_all(&s_eth_handles, &s_eth_count));
+    ESP_ERROR_CHECK(example_eth_init(&s_eth_handles, &s_eth_count));
 
     esp_netif_inherent_config_t esp_netif_config = ESP_NETIF_INHERENT_DEFAULT_ETH();
     // Warning: the interface desc is used in tests to capture actual connection details (IP, gw, mask)
@@ -105,33 +105,6 @@ static esp_netif_t *eth_start(void)
     return s_eth_netif;
 }
 
-static void eth_stop(void)
-{
-    ESP_ERROR_CHECK(esp_event_handler_unregister(IP_EVENT, IP_EVENT_GOT_IP6, &eth_on_got_ipv6));
-    ESP_ERROR_CHECK(esp_event_handler_unregister(ETH_EVENT, ETHERNET_EVENT_CONNECTED, &on_eth_event));
-    ESP_ERROR_CHECK(esp_eth_stop(s_eth_handles[0]));
-    ESP_ERROR_CHECK(esp_eth_del_netif_glue(s_eth_glue));
-    esp_netif_destroy(s_eth_netif);
-    ethernet_deinit_all(s_eth_handles);
-
-    s_eth_glue = NULL;
-    s_eth_netif = NULL;
-    s_eth_handles = NULL;
-    s_eth_count = 0;
-}
-
-
-/* tear down connection, release resources */
-static void eth_shutdown(void)
-{
-    if (s_semph_get_ip6_addrs == NULL) {
-        return;
-    }
-    vSemaphoreDelete(s_semph_get_ip6_addrs);
-    s_semph_get_ip6_addrs = NULL;
-    eth_stop();
-}
-
 //print all IPs of netifs
 static esp_err_t print_all_ips_tcpip(void* ctx)
 {
@@ -158,8 +131,6 @@ esp_err_t eth_connect(void)
     eth_start();
     ESP_LOGI(TAG, "Waiting for IP(s).");
     xSemaphoreTake(s_semph_get_ip6_addrs, portMAX_DELAY);
-
-    ESP_ERROR_CHECK(esp_register_shutdown_handler(&eth_shutdown));
 
     // Print all IPs in TCPIP context to avoid potential races of removing/adding netifs when iterating over the list
     esp_netif_tcpip_exec(print_all_ips_tcpip, NULL);
