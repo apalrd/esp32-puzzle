@@ -21,4 +21,5 @@ int frame_recv(struct frame_t *frame, char *buf, size_t len, int *time);
 int frame_send(struct frame_t *frame, const char *data, size_t len);
 
 /* rfid.c */
+extern int g_rfid_tag_active;
 void rfid_init(void);
